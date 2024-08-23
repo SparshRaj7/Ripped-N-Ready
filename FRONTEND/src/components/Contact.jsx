@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const {data} = await axios.post("http://localhost:4000/send/mail",{name, email, message},{withCredentials: true, headers: {"Content-Type": "application/json"}});
+      const {data} = await axios.post("https://ripped-n-ready-back.onrender.com/send/mail",{name, email, message},{withCredentials: true, headers: {"Content-Type": "application/json"}});
       setName("");
       setEmail("");
       setMessage("");
